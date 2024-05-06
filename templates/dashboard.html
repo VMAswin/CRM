@@ -200,51 +200,103 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
   left: 0px;
 }
 .responsive {
-  width: 100%;
+  width: 80%;
   height: 500px;
 }
-
-/* #p1{
-  border: 1px solid red;
-  
-}
-#p1:hover{
-  background-color: #2968a8;
-  border: 2px solid red;
-} */
-#fa{
-  color: white;
-  font-size: 500px;
-}
-.icon{
-  
-  position: relative;
-  left: 80px;
-  bottom: 80px;
-}
-
-.popup{
-  width: 200px;
-  height: 50px;
-}
-#con5{
-  width: 100%;
-    max-width: 700px;
+#archiveDiv{
+        display: none;               
+        /* transition: opacity 0.7s ease; */
+    }
+    .cardbox{
+        
+        box-shadow: 2px 3px 3px grey;
+        padding: 5px;
+      
+       position: relative;
+       top: 50px;
+    }
     
-    position: relative;
-    top: 100px;
-    height: 500px;
-}
-#h11{
-  position: relative;
- bottom: 20px;
-}
-#archive-container{
+    /* .cardbox:hover{
+        box-shadow: 2px 8px 20px black;
+        top: -5px;
+    } */
+    .cardbox a {
+        text-decoration: none;
+        color: black;
+        text-shadow: 1px 1px black;
+        background-color: transparent;
+    }
+    .cardbox a:hover{
+        
+        text-transform: uppercase;
+        font-weight: 500;
+        color: black;
+        
+    }
+    .draggable:active {
+        opacity: 0.4; /* Reduce opacity when dragging */
+        cursor: grabbing;
+    }
+    #archiveBox{
+        /* width: 100px;
+        height: 100px; */
+        transition: all 0.7s ease;
+        
+    }
+    /* #archiveBox.dragover{
+        height: 150px;
+        width: 150px;       
+        
+    } */
+    #archiveBox.drop{
+        height: 0px;
+        width: 0px;
+        /* transition: all 0.7s ease; */
+    }
+    @media (min-width: 768px) {
+        #archiveIcon { 
+        position: relative;   
+        justify-self: center;
+        align-self: center;
+        padding: 5% 4%;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 68, 0, 0.6);
+        background-color: rgb(12,160,168);
+        transition: top 0.7s ease; 
+        
+    }
+    }
+
+    @media (max-width: 768px) {
+        #archiveIcon{
+            position: relative;   
+            justify-self: center;
+            align-self: center;
+            padding: 50px 40px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 68, 0, 0.6);
+            background-color: rgba(255, 68, 0, 0.2);
+            transition: top 0.7s ease; 
+        }
+    }
+
+
+    #archiveBox.dragover #archiveIcon {
+    font-size: 2em; 
+    /* padding: 50% 35%; */
+    transition: font-size 0.7s ease; 
+    }
+    #archiveDiv{
+        display: none;               
+        transition: opacity 0.7s ease;
+    }
+#cont1{
   
-  width: 390px;
   position: relative;
-  bottom: 30px;
+  left: 0px;
+  
 }
+
    </style>
 </head>
 <body>
@@ -274,7 +326,7 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
       </div>
   </nav>
       <div class="container" id="con1">
-        <h4>Sales</h4>
+        <h4 id="ho4">Sales</h4>
       <div class="card-list">
         <a href="#" class="card-item">
             
@@ -306,186 +358,223 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
   </div><br><br>
   <div class="container" id="con2">
     <img src="{% static 'images/cr5.png' %}" class="responsive">
-  </div>
-  <!-- <div class="content">
-    <section id="dashboard" class="dashboard"> -->
-      <div class="container-fluid d-flex flex-column" style="background-color: white;" id="con5">
-        <div>
-            <h1 id="h11" style="text-align: center; font-weight: bold;">Activity</h1><br>
-            <div class="popup" id="popup">
-              <div class="popup-container">
-                  <div class="text-center" id="c1">
-                      <span><i class="fa fa-solid fa-file-export fs-1" id="fa" ></i></span>
-                  </div>
-                  <!-- <p style="color: red;" id="p1">Drop here </p> -->
-                  <div class="icon">
-                    <i class="lni lni-archive" style="font-size: 50px;"></i>
-                  </div>
-                  
-              </div>
-          </div>
+  </div><br>
+  
+  <div class="container" id="cont1">
+    <center>
+    <h4>Plans</h4>
+  </center>
+  <div class="row mt-5" id="archiveDiv"  >
+    <div id="archiveBox" class="col d-flex justify-content-center" >
+        <i id="archiveIcon" class="fa-solid fa-box-archive fa-fade fa-xl" style="color: orangered;"></i>
+    </div>
+    </div>
+    
+      <div class="row my-3" >
+    
+        <div class=" col-md justify-content-center  py-5" style="display: flex;flex-wrap: wrap;justify-content: start;">
+        
+            <div >
+                <div class="card draggable cardbox mx-md-2 mt-4" style="width: 14rem;background-color: lightskyblue;" draggable="true">  
+                    <center><div class="mt-3" ><h1>Free<span style="font-size: large;"></span></h1><h4 class="card-title py-3 justify-content-center d-flex" >$0</h4></div></center>      
+                    <div class="card-body"  >
+                    <h4 class="card-title py-1 justify-content-center d-flex"  >10%</h4>
+                    <h6 class="card-title py-1 justify-content-center d-flex"  >No commission</h6>
+                    <h6 class="card-title py-1 justify-content-center d-flex"  >Best offer</h6>
+                    
+                    </div>
+                    <center> <a href="#" class="btn p-3 w-100 " >Try it</a> </center>
+                </div>
+            </div>
+        
+            <div >
+                <div class="card draggable cardbox mx-md-2 mt-4" style="width: 14rem;background-color: lightskyblue;" draggable="true">  
+                    <center><div class="mt-3" ><h1>Basic<span style="font-size: large;"></span></h1><h4 class="card-title py-3 justify-content-center d-flex" >$5</h4></div></center>      
+                    <div class="card-body"  >
+                    <h4 class="card-title py-1 justify-content-center d-flex" >20%</h4>
+                    <h6 class="card-title py-1 justify-content-center d-flex"  >No commission</h6>
+                    <h6 class="card-title py-1 justify-content-center d-flex"  >Best offer</h6>
+                    
+                    </div>
+                    <center> <a href="#" class="btn p-3 w-100 " >Try it</a> </center>
+                </div>
+            </div>
+        
+            <div >
+                <div class="card draggable cardbox mx-md-2 mt-4" style="width: 14rem;background-color: lightskyblue;" draggable="true">  
+                    <center><div class="mt-3" ><h1>Standard<span style="font-size: large;"></span></h1><h4 class="card-title py-3 justify-content-center d-flex" >$10</h4></div></center>      
+                    <div class="card-body" >
+                    <h4 class="card-title py-1 justify-content-center d-flex">30%</h4>
+                    <h6 class="card-title py-1 justify-content-center d-flex"  >No commission</h6>
+                    <h6 class="card-title py-1 justify-content-center d-flex"  >Best offer</h6>
+                    
+                    </div>
+                    <center> <a href="#" class="btn p-3 w-100 " >Try it</a> </center>
+                </div>
+            </div>
+        
+           
+        
+            <div >
+                <div class="card draggable cardbox mx-md-2 mt-4" style="width: 14rem;background-color: lightskyblue;" draggable="true">  
+                    <center><div class="mt-3" ><h1>Premium<span style="font-size: large;"></span></h1><h4 class="card-title py-3 justify-content-center d-flex" >$15</h4></div></center>      
+                    <div class="card-body"  >
+                    <h4 class="card-title py-1 justify-content-center d-flex">40%</h4>
+                    <h6 class="card-title py-1 justify-content-center d-flex"  >No commission</h6>
+                    <h6 class="card-title py-1 justify-content-center d-flex"  >Best offer</h6>
+                    
+                    </div>
+                    <center> <a href="#" class="btn p-3 w-100 " >Try it</a> </center>
+                </div>
+            </div>
+      
             
         </div>
-        <div class="row" id="archive-container">
+        
+        
         </div>
       </div>
-      <!-- <div class="popup" id="popup">
-          <div class="popup-container">
-              <div class="text-center">
-                  <span><i class="fa-solid fa-file-export fs-1" style="color: rgb(241, 179, 62);"></i></span>
-              </div>
-              <!-- <p style="color: red;" id="p1">Drop here </p> 
-              
-          </div>
-      </div> -->
-    <!-- </section>
-    </div>  -->
-<script>
- 
-var qarchivedData = [
-{
-id:1,
-period: 10,
-cardText: "Content 1",
-percentage: "25%",
-viewiInDash: true
-},
-{
-id: 2,
-period: 20,
-cardText: "content 2",
-percentage: "30%",
-viewiInDash: true
-},
-{
-id: 3,
-period: 30,
-cardText:"content 3",
-percentage: "40%",
-viewiInDash: true
-},
-{
-id: 4,
-period: 40,
-cardText:"content 4",
-percentage: "50%",
-viewiInDash: true
-},
-];
-var selectedArchive;
-var localStorageArchiveData = JSON.parse(localStorage.getItem('archivedCard'));
-if(!localStorageArchiveData){
-  localStorage.setItem('archivedCard', JSON.stringify(qarchivedData));
-} else {
-  qarchivedData = localStorageArchiveData;
-}
-var container = document.getElementById('archive-container');
-var popup = document.getElementById('popup');
-createArchiveCard();
-function createArchiveCard(){
-    container.innerHTML = `<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6 pb-4 d-none col-card-view" id="card1" style="padding:10px;">
-                                <div class="archive-card"  style="background-color: aliceblue;" >
-                                    <div class="card-body text-center" >
-                                        <h4 class="card-price" style="color: red;"><span class="period" style="font-size: 25px;"></span></h4>
-                                        <p class="card-text"></p>
-                                        <ul class="list-unstyled">
-                                            <li class="farrow-down"><i class="fa-solid fa-arrow-down"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                          </div>`;
-    qarchivedData.forEach(function(item, index) {
-  var cardClone = document.querySelector('#card1').cloneNode(true);
-  if(item?.viewiInDash){
-    cardClone.style.setProperty('display', 'block', 'important');
-    cardClone.querySelector('.period').textContent = item.period;
-    cardClone.querySelector('.card-text').textContent = item.cardText;
-    var percentageLi = cardClone.querySelector('.farrow-down');
-    if (percentageLi) {
-      percentageLi.textContent = item.percentage;
-    }
-    cardClone.draggable = true;
-    cardClone.addEventListener('dragstart', function(event) {
-      event.dataTransfer.setData('text/plain', JSON.stringify(item));
-    });
-    container.appendChild(cardClone);
-  }
-});
-}
-
-popup.addEventListener('dragover', function(event) {
-  event.preventDefault();
-});
-container.addEventListener('dragend', function(event) {
-  event.preventDefault();
-  popup.style.display = 'none';
-});
-
-popup.addEventListener('drop', function(event) {
-  event.preventDefault();
-  var selectedArchive = JSON.parse(event.dataTransfer.getData('text/plain'));
-  qarchivedData?.forEach((x)=> {
-    if(x?.id == selectedArchive?.id){
-      x.viewiInDash = false;
-    }
-  });
-  localStorage.setItem('archivedCard', JSON.stringify(qarchivedData));
-  createArchiveCard();
-  popup.style.display = 'none';
-});
-
-container.addEventListener('dragstart', function(event) {
-  selectedArchive = JSON.parse(event.dataTransfer.getData('text/plain'));
-  var rect = event.target.getBoundingClientRect();
-  var popupTop = rect.top + window.scrollY - 118;
-  var popupLeft = rect.left + window.scrollX + rect.width - 311;
-  popup.style.top = popupTop + 'px';
-  popup.style.left = popupLeft + 'px';
-  popup.style.display = 'block';
-});
-function hideArchivedCards() {
-      // Load archived cards from local storage
-      var archivedCards = JSON.parse(localStorage.getItem('archivedCard')) || [];
-      // Iterate through each card
-      for (let card of cards) {
-          // Check if the card's inner HTML content is in the archived cards
-          if (archivedCards.includes(card.innerHTML)) {
-              card.style.display = 'none'; // Hide the card if it's archived
-          }
-      }
-  }
-  
-  // Call the function to hide archived cards when the page loads
- 
-  window.addEventListener('load', hideArchivedCards);
-  
-  // 
-  
-  
-  
-  
-      
-     // dragover archivebox style
-  
-     let archiveIcon = document.getElementById('archiveIcon');
+        <script>
+          let cards = document.getElementsByClassName('cardbox');
+        let archiveBox = document.getElementById('archiveBox');
+        let archiveDiv = document.getElementById('archiveDiv');
     
-      archiveBox.addEventListener('dragover', function(event) {
-          event.preventDefault(); // Prevent default behavior
-          archiveBox.classList.add('dragover'); // Add 'dragover' class
-          
-      });
-  
-      archiveBox.addEventListener('dragleave', function(event) {
-          archiveBox.classList.remove('dragover'); // Remove 'dragover' class when leaving
-          
-      });
-  
-      archiveBox.addEventListener('drop', function(event) {
-          archiveBox.classList.remove('dragover'); // Remove 'dragover' class when leaving
-          
-      });
-  
-  
-</script>
+        // Load archived cards from local storage
+        let archivedCards = JSON.parse(localStorage.getItem('archivedCards')) || [];
+    
+        // Function to save archived cards to local storage
+        function saveToLocalStorage() {
+            localStorage.setItem('archivedCards', JSON.stringify(archivedCards));
+        }
+    
+        // Function to handle dropping a card into the archive box
+        function handleDrop(selectedCard) {
+            selectedCard.style.display = 'none';
+            archiveDiv.style.display = 'none';
+            archivedCards.push(selectedCard.innerHTML); // Save card HTML content
+            saveToLocalStorage(); // Save to local storage
+            
+        }
+    
+        for (let card of cards) {
+        // Add dragstart event listener for desktop view
+        card.addEventListener("dragstart", function(e) {
+            archiveDiv.style.display = 'block'; // Display the archiveDiv
+            archiveDiv.style.opacity = '1';
+            let selected = e.target;
+    
+            archiveBox.addEventListener("dragover", function(e) {
+                e.preventDefault();
+            });
+    
+            card.addEventListener("dragend", function(e) {
+                archiveDiv.style.display = 'none';
+                selected = null;
+            });
+    
+            archiveBox.addEventListener("drop", function(e) {
+                e.preventDefault();
+                handleDrop(selected);
+            });
+        });
+    
+        // Add touchstart event listener
+        card.addEventListener("touchstart", function(e) {
+            // Prevent default touch behavior to avoid issues with touch events
+            e.preventDefault();
+            archiveDiv.style.display = 'block'; // Display the archiveDiv
+            archiveDiv.style.opacity = '1';
+            // Get the touch target
+            let touch = e.touches[0];
+            
+            // Store initial touch coordinates
+            card.setAttribute('data-touchstart-x', touch.clientX);
+            card.setAttribute('data-touchstart-y', touch.clientY);
+        });
+    
+        // Add touchmove event listener
+        card.addEventListener("touchmove", function(e) {
+            // Prevent default touch behavior to avoid issues with touch events
+            e.preventDefault();
+            
+            // Get the touch target
+            let touch = e.touches[0];
+            
+            // Calculate distance moved
+            let deltaX = touch.clientX - parseInt(card.getAttribute('data-touchstart-x'));
+            let deltaY = touch.clientY - parseInt(card.getAttribute('data-touchstart-y'));
+            
+            // Apply translation to the card's position
+            card.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        });
+    
+        
+    
+        card.addEventListener("touchend", function(e) {
+        // Reset card position after touchend
+        card.style.transform = 'translate(0px, 0px)';
+        setTimeout(function() {
+            archiveDiv.style.display = 'none';
+        }, 200); // Hide the archiveDiv after touchend
+        
+        // Get the touch position relative to the viewport
+        var touchX = e.changedTouches[0].clientX;
+        var touchY = e.changedTouches[0].clientY;
+        console.log("Touch position: X:", touchX, "Y:", touchY);
+        
+        // Check if the touch ended within the boundaries of the archiveDiv
+        var elementUnderTouch = document.elementFromPoint(touchX, touchY);
+        console.log("Element under touch:", elementUnderTouch);
+        if (elementUnderTouch.id === "archiveIcon") {
+            handleDrop(card);
+        }
+    });
+    
+    
+    
+        
+        
+    }
+    
+    
+        function hideArchivedCards() {
+        // Load archived cards from local storage
+        let archivedCards = JSON.parse(localStorage.getItem('archivedCards')) || [];
+        
+        // Iterate through each card
+        for (let card of cards) {
+            // Check if the card's inner HTML content is in the archived cards
+            if (archivedCards.includes(card.innerHTML)) {
+                card.style.display = 'none'; // Hide the card if it's archived
+            }
+        }
+    }
+    
+    // Call the function to hide archived cards when the page loads
+    window.addEventListener('load', hideArchivedCards);
+    
+    
+    
+       let archiveIcon = document.getElementById('archiveIcon');
+    
+        archiveBox.addEventListener('dragover', function(event) {
+            event.preventDefault(); // Prevent default behavior
+            archiveBox.classList.add('dragover'); // Add 'dragover' class
+            
+        });
+    
+        archiveBox.addEventListener('dragleave', function(event) {
+            archiveBox.classList.remove('dragover'); // Remove 'dragover' class when leaving
+            
+        });
+    
+        archiveBox.addEventListener('drop', function(event) {
+            archiveBox.classList.remove('dragover'); // Remove 'dragover' class when leaving
+            
+        });
+    
+    
+        </script>
+
 </body>
 </html>
