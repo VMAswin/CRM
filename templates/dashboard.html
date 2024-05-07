@@ -37,6 +37,9 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
 
     <style>
         .navbar{
@@ -44,8 +47,8 @@
           /* display: flex;
         top:0;*/
         width: 100%; 
-        background: rgb(28,168,191);
-background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%, rgba(66,105,176,1) 100%);
+        background: rgb(12,178,222);
+background: linear-gradient(90deg, rgba(12,178,222,1) 0%, rgba(83,189,230,1) 40%, rgba(10,178,227,1) 100%);
         /* overflow: auto;
         height: auto; */
      }
@@ -56,8 +59,8 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
                 left: 0;
                 width: 170px;
                 height: 100%;
-                background: rgb(28,168,191);
-background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%, rgba(66,105,176,1) 100%);
+                background: rgb(12,178,222);
+background: linear-gradient(90deg, rgba(12,178,222,1) 0%, rgba(83,189,230,1) 40%, rgba(10,178,227,1) 100%);
                 overflow-y: auto;
                 padding-top: 30px
               }
@@ -296,6 +299,13 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
   left: 0px;
   
 }
+body{
+    background-color: whitesmoke;
+}
+#chartContainer{
+    position: relative;
+    top: 60px;
+}
 
    </style>
 </head>
@@ -328,7 +338,7 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
       <div class="container" id="con1">
         <h4 id="ho4">Sales</h4>
       <div class="card-list">
-        <a href="#" class="card-item">
+        <a href="#" class="card-item" style="background-color: lightskyblue;">
             
             <span class="developer">Total customers</span>
             <h3>500</h3><br>
@@ -337,7 +347,7 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
                 <i class="fas fa-arrow-right card-icon"></i>
             </div>
         </a>
-        <a href="#" class="card-item">
+        <a href="#" class="card-item" style="background-color: lightskyblue;">
             
             <span class="designer">Total Sales</span>
             <h3>$100,000</h3><br>
@@ -346,7 +356,7 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
                 <i class="fas fa-arrow-right card-icon"></i>
             </div>
         </a>
-        <a href="#" class="card-item">
+        <a href="#" class="card-item" style="background-color: lightskyblue;">
             <span class="editor">Order Value</span>
             <h3>$200</h3><br>
             <button type="button" style="background-color: cadetblue;width: 50px;">View</button>
@@ -356,10 +366,9 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
         </a>
     </div>
   </div><br><br>
-  <div class="container" id="con2">
-    <img src="{% static 'images/cr5.png' %}" class="responsive">
-  </div><br>
-  
+  <center>
+    <div id="chartContainer" style="height: 300px; width: 80%;"></div>
+</center>
   <div class="container" id="cont1">
     <center>
     <h4>Plans</h4>
@@ -412,8 +421,7 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
                     <center> <a href="#" class="btn p-3 w-100 " >Try it</a> </center>
                 </div>
             </div>
-        
-           
+            
         
             <div >
                 <div class="card draggable cardbox mx-md-2 mt-4" style="width: 14rem;background-color: lightskyblue;" draggable="true">  
@@ -573,8 +581,33 @@ background: linear-gradient(90deg, rgba(28,168,191,1) 0%, rgba(53,123,195,1) 31%
             
         });
     
-    
-        </script>
 
+ 
+
+        </script>
+<script type="text/javascript">
+
+    window.onload = function () {
+        var chart = new CanvasJS.Chart("chartContainer", {
+            title:{
+                text: "Sales Chart"              
+            },
+            data: [              
+            {
+                // Change type to "doughnut", "line", "splineArea", etc.
+                type: "column",
+                dataPoints: [
+                    { label: "Pen",  y: 10  },
+                    { label: "Pencil", y: 15  },
+                    { label: "Box", y: 25  },
+                    { label: "Notebook",  y: 30  },
+                    { label: "Bag",  y: 28  }
+                ]
+            }
+            ]
+        });
+        chart.render();
+    }
+    </script>
 </body>
 </html>
