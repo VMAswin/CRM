@@ -4,211 +4,20 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="{% static 'style.css' %}"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{% static 'icons.css' %}"> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="styles.css"> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/274ee977b7.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-<script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <title>CRM</title>
+  <link rel="shortcut icon" href="{% static 'images/icon.png' %}" type="image/png">
+    
+<link rel="stylesheet" href="{% static 'styles.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'tabler-icons.css' %}"> 
+  <script src="https://kit.fontawesome.com/38597ac250.js" crossorigin="anonymous"></script>
+
 
 
     <style>
-        .navbar{
-         
-          /* display: flex;
-        top:0;*/
-        width: 100%; 
-        background: rgb(12,178,222);
-background: linear-gradient(90deg, rgba(12,178,222,1) 0%, rgba(83,189,230,1) 40%, rgba(10,178,227,1) 100%);
-        /* overflow: auto;
-        height: auto; */
-     }
-     @media (min-width:992px) {    
-            .vertical-nav {
-                position: fixed;
-                top: 56px;
-                left: 0;
-                width: 170px;
-                height: 100%;
-                background: rgb(12,178,222);
-background: linear-gradient(90deg, rgba(12,178,222,1) 0%, rgba(83,189,230,1) 40%, rgba(10,178,227,1) 100%);
-                overflow-y: auto;
-                padding-top: 30px
-              }
-              li{
-                border-bottom: 2px solid black;
-                
-              }
-              .content{
-                display: block;
-                margin-left:280px;
-               margin-top:60px;
-               width: 1050px;
-               
-             }
-             .align{
-              margin-left: 190px;
-             }
-            }
-           .container{
-            position: relative;
-            left: 200px;
-            top: 100px;
-           } 
-           /* Importing Google font - Open Sans */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-
-.card-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    max-width: 1250px;
-    
-    padding: 10px;
-    gap: 20px;
-    
-}
-
-.card-list .card-item {
-    background: #fff;
-    padding: 26px;
-    border-radius: 8px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
-    list-style: none;
-    cursor: pointer;
-    text-decoration: none;
-    border: 2px solid transparent;
-    transition: border 0.5s ease;
-}
-
-.card-list .card-item:hover {
-    border: 2px solid #000;
-}
-
-.card-list .card-item img {
-    width: 100%;
-    aspect-ratio: 16/9;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.card-list span {
-    display: inline-block;
-    background: #F7DFF5;
-    margin-top: 32px;
-    padding: 8px 15px;
-    font-size: 0.75rem;
-    border-radius: 50px;
-    font-weight: 600;
-}
-
-.card-list .developer {
-    background-color: #F7DFF5; 
-    color: #B22485;
-}   
-
-.card-list .designer {
-    background-color: #d1e8ff;
-    color: #2968a8;
-}
-
-.card-list .editor {
-    background-color: #d6f8d6; 
-    color: #205c20;
-}
-
-.card-item h3 {
-    color: #000;
-    font-size: 1.438rem;
-    margin-top: 28px;
-    font-weight: 600;
-}
-
-.card-item .arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: rotate(-35deg);
-    height: 40px;
-    width: 40px;
-    color: #000;
-    border: 1px solid #000;
-    border-radius: 50%;
-    margin-top: 40px;
-    transition: 0.2s ease;
-}
-
-.card-list .card-item:hover .arrow  {
-    background: #000;
-    color: #fff; 
-}
-
-@media (max-width: 1200px) {
-    .card-list .card-item {
-        padding: 15px;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    .card-list {
-        margin: 0 auto;
-    }
-}
-#con1{
-  
-  position: relative;
-  left: 0px;
-  
-}
-#con2{
-  
-  position: relative;
-  left: 0px;
-}
-.responsive {
-  width: 80%;
-  height: 500px;
-}
-#archiveDiv{
+        
+ #archiveDiv{
         display: none;               
-        /* transition: opacity 0.7s ease; */
+        
     }
     .cardbox{
         
@@ -219,10 +28,7 @@ background: linear-gradient(90deg, rgba(12,178,222,1) 0%, rgba(83,189,230,1) 40%
        top: 50px;
     }
     
-    /* .cardbox:hover{
-        box-shadow: 2px 8px 20px black;
-        top: -5px;
-    } */
+    
     .cardbox a {
         text-decoration: none;
         color: black;
@@ -237,24 +43,19 @@ background: linear-gradient(90deg, rgba(12,178,222,1) 0%, rgba(83,189,230,1) 40%
         
     }
     .draggable:active {
-        opacity: 0.4; /* Reduce opacity when dragging */
+        opacity: 0.4; 
         cursor: grabbing;
     }
     #archiveBox{
-        /* width: 100px;
-        height: 100px; */
+        
         transition: all 0.7s ease;
         
     }
-    /* #archiveBox.dragover{
-        height: 150px;
-        width: 150px;       
-        
-    } */
+    
     #archiveBox.drop{
         height: 0px;
         width: 0px;
-        /* transition: all 0.7s ease; */
+        
     }
     @media (min-width: 768px) {
         #archiveIcon { 
@@ -286,96 +87,449 @@ background: linear-gradient(90deg, rgba(12,178,222,1) 0%, rgba(83,189,230,1) 40%
 
     #archiveBox.dragover #archiveIcon {
     font-size: 2em; 
-    /* padding: 50% 35%; */
+    
     transition: font-size 0.7s ease; 
     }
     #archiveDiv{
         display: none;               
         transition: opacity 0.7s ease;
-    }
+    } 
 #cont1{
   
   position: relative;
   left: 0px;
   
+  
 }
 body{
     background-color: whitesmoke;
 }
-#chartContainer{
-    position: relative;
-    top: 60px;
-}
+
 
    </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top scrolling-navbar bg-inverse">
-    <a href="">
-    <img src="{% static 'images/icon.png' %}" width="30px" height="30px">
-    </a>
-    <a class="navbar-brand" href="#" style="color: brown;text-decoration: none;">CRM</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-  </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto flex-column vertical-nav ">
-          <li class="nav-item">
-            <a href="{% url 'home' %}" class="nav-link">
-              <i class="fa fa-home"></i>
-              <strong>Home</strong>
-            </a>
-             </li>
-            <li class="nav-item">
-                <a class="nav-link " href="{% url 'dashboard' %}"><i class="fa fa-dashboard"></i><strong> Dashboard</strong></a>
-                 </li>
-          <li class="nav-item">
-         <a class="nav-link " href="{% url 'archives' %}"><i class="fa fa-archive"></i> <strong>Archieve</strong> </a>
-          </li>
-        </ul>
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+   
+    <aside class="left-sidebar">
+      
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between" >
+          
+		  <a href="">
+			<img src="{% static 'images/icon.png' %}" width="30px" height="30px">
+			</a>
+			<a class="navbar-brand" href="#" style="color: brown;text-decoration: none;font-size: x-large;">CRM</a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="" style="background-color: lightskyblue;">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu"><a href="{% url 'home' %}">Home</a></span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{% url 'dashboard' %}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+			<li class="sidebar-item">
+				<a class="sidebar-link" href="{% url 'archives' %}" aria-expanded="false">
+				  <span>
+					<i class="ti ti-archive"></i>
+				  </span>
+				  <span class="hide-menu">Archives</span>
+				</a>
+			  </li>
+            
+          </ul>
+          
+        </nav>
+        
       </div>
-  </nav>
-      <div class="container" id="con1">
-        <h4 id="ho4">Sales</h4>
-      <div class="card-list">
-        <a href="#" class="card-item" style="background-color: lightskyblue;">
+      
+    </aside>
+    
+    <div class="body-wrapper">
+      
+      <header class="app-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <ul class="navbar-nav">
+            <li class="nav-item d-block d-xl-none">
+              <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                <i class="ti ti-menu-2"></i>
+              </a>
+            </li>
             
-            <span class="developer">Total customers</span>
-            <h3>500</h3><br>
-            <button type="button" style="background-color: cadetblue;width: 50px;">View</button>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
+          </ul>
+         
+        </nav>
+      </header>
+      
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-lg-8 d-flex align-items-strech">
+            <div class="card w-100">
+              <div class="card-body">
+                <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+                  <div class="mb-3 mb-sm-0">
+                    <h5 class="card-title fw-semibold">Sales Overview</h5>
+                  </div>
+                  <div>
+                    <select class="form-select">
+                      <option value="1">March 2023</option>
+                      <option value="2">April 2023</option>
+                      <option value="3">May 2023</option>
+                      <option value="4">June 2023</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="chart"></div>
+              </div>
             </div>
-        </a>
-        <a href="#" class="card-item" style="background-color: lightskyblue;">
-            
-            <span class="designer">Total Sales</span>
-            <h3>$100,000</h3><br>
-            <button type="button" style="background-color: cadetblue;width: 50px;">View</button>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <div class="col-lg-12">
+                
+                <div class="card overflow-hidden">
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-9 fw-semibold">Yearly Breakup</h5>
+                    <div class="row align-items-center">
+                      <div class="col-8">
+                        <h4 class="fw-semibold mb-3">$36,358</h4>
+                        <div class="d-flex align-items-center mb-3">
+                          <span
+                            class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
+                            <i class="ti ti-arrow-up-left text-success"></i>
+                          </span>
+                          <p class="text-dark me-1 fs-3 mb-0">+9%</p>
+                          <p class="fs-3 mb-0">last year</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <div class="me-4">
+                            <span class="round-8 bg-primary rounded-circle me-2 d-inline-block"></span>
+                            <span class="fs-2">2023</span>
+                          </div>
+                          <div>
+                            <span class="round-8 bg-light-primary rounded-circle me-2 d-inline-block"></span>
+                            <span class="fs-2">2023</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="d-flex justify-content-center">
+                          <div id="breakup"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row alig n-items-start">
+                      <div class="col-8">
+                        <h5 class="card-title mb-9 fw-semibold"> Monthly Earnings </h5>
+                        <h4 class="fw-semibold mb-3">$6,820</h4>
+                        <div class="d-flex align-items-center pb-1">
+                          <span
+                            class="me-2 rounded-circle bg-light-danger round-20 d-flex align-items-center justify-content-center">
+                            <i class="ti ti-arrow-down-right text-danger"></i>
+                          </span>
+                          <p class="text-dark me-1 fs-3 mb-0">+9%</p>
+                          <p class="fs-3 mb-0">last year</p>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="d-flex justify-content-end">
+                          <div
+                            class="text-white bg-secondary rounded-circle p-6 d-flex align-items-center justify-content-center">
+                            <i class="ti ti-currency-dollar fs-6"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="earning"></div>
+                </div>
+              </div>
             </div>
-        </a>
-        <a href="#" class="card-item" style="background-color: lightskyblue;">
-            <span class="editor">Order Value</span>
-            <h3>$200</h3><br>
-            <button type="button" style="background-color: cadetblue;width: 50px;">View</button>
-            <div class="arrow">
-                <i class="fas fa-arrow-right card-icon"></i>
+          </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-4 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body p-4">
+                  <div class="mb-4">
+                    <h5 class="card-title fw-semibold">Recent Transactions</h5>
+                  </div>
+                  <ul class="timeline-widget mb-0 position-relative mb-n5">
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">09:30</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-primary flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1">Payment received from John Doe of $385.90</div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">10:00 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-info flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New sale recorded <a
+                          href="javascript:void(0)" class="text-primary d-block fw-normal">#ML-3467</a>
+                      </div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1">Payment was made of $64.95 to Michael</div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-warning flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New sale recorded <a
+                          href="javascript:void(0)" class="text-primary d-block fw-normal">#ML-3467</a>
+                      </div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">09:30 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-danger flex-shrink-0 my-8"></span>
+                        <span class="timeline-badge-border d-block flex-shrink-0"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1 fw-semibold">New arrival recorded 
+                      </div>
+                    </li>
+                    <li class="timeline-item d-flex position-relative overflow-hidden">
+                      <div class="timeline-time text-dark flex-shrink-0 text-end">12:00 am</div>
+                      <div class="timeline-badge-wrap d-flex flex-column align-items-center">
+                        <span class="timeline-badge border-2 border border-success flex-shrink-0 my-8"></span>
+                      </div>
+                      <div class="timeline-desc fs-3 text-dark mt-n1">Payment Done</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </a>
+            <div class="col-lg-8 d-flex align-items-stretch">
+              <div class="card w-100">
+                <div class="card-body p-4">
+                  <h5 class="card-title fw-semibold mb-4">Recent Transactions</h5>
+                  <div class="table-responsive">
+                    <table class="table text-nowrap mb-0 align-middle">
+                      <thead class="text-dark fs-4">
+                        <tr>
+                          <th class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0">Id</h6>
+                          </th>
+                          <th class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0">Assigned</h6>
+                          </th>
+                          <th class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0">Name</h6>
+                          </th>
+                          <th class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0">Priority</h6>
+                          </th>
+                          <th class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0">Budget</h6>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="border-bottom-0"><h6 class="fw-semibold mb-0">1</h6></td>
+                          <td class="border-bottom-0">
+                              <h6 class="fw-semibold mb-1">Sajin</h6>
+                              <span class="fw-normal">Business Man</span>                          
+                          </td>
+                          <td class="border-bottom-0">
+                            <p class="mb-0 fw-normal">Elite Admin</p>
+                          </td>
+                          <td class="border-bottom-0">
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="badge bg-primary rounded-3 fw-semibold">Low</span>
+                            </div>
+                          </td>
+                          <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0 fs-4">$3.9</h6>
+                          </td>
+                        </tr> 
+                        <tr>
+                          <td class="border-bottom-0"><h6 class="fw-semibold mb-0">2</h6></td>
+                          <td class="border-bottom-0">
+                              <h6 class="fw-semibold mb-1">Albin Tomy</h6>
+                              <span class="fw-normal">Project Engineer</span>                          
+                          </td>
+                          <td class="border-bottom-0">
+                            <p class="mb-0 fw-normal">Real Homes</p>
+                          </td>
+                          <td class="border-bottom-0">
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="badge bg-secondary rounded-3 fw-semibold">Medium</span>
+                            </div>
+                          </td>
+                          <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0 fs-4">$24.5k</h6>
+                          </td>
+                        </tr> 
+                        <tr>
+                          <td class="border-bottom-0"><h6 class="fw-semibold mb-0">3</h6></td>
+                          <td class="border-bottom-0">
+                              <h6 class="fw-semibold mb-1">Akshay k</h6>
+                              <span class="fw-normal">Project Manager</span>                          
+                          </td>
+                          <td class="border-bottom-0">
+                            <p class="mb-0 fw-normal">MedicalPro</p>
+                          </td>
+                          <td class="border-bottom-0">
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="badge bg-danger rounded-3 fw-semibold">High</span>
+                            </div>
+                          </td>
+                          <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0 fs-4">$12.8k</h6>
+                          </td>
+                        </tr>      
+                        <tr>
+                          <td class="border-bottom-0"><h6 class="fw-semibold mb-0">4</h6></td>
+                          <td class="border-bottom-0">
+                              <h6 class="fw-semibold mb-1">Sreerag M</h6>
+                              <span class="fw-normal">App Engineer</span>                          
+                          </td>
+                          <td class="border-bottom-0">
+                            <p class="mb-0 fw-normal">CA</p>
+                          </td>
+                          <td class="border-bottom-0">
+                            <div class="d-flex align-items-center gap-2">
+                              <span class="badge bg-success rounded-3 fw-semibold">Critical</span>
+                            </div>
+                          </td>
+                          <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0 fs-4">$2.4k</h6>
+                          </td>
+                        </tr>                       
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-sm-6 col-xl-3">
+            <div class="card overflow-hidden rounded-2">
+              <div class="position-relative">
+                <a href="javascript:void(0)"><img src="{% static 'images/c1.jpg' %}" class="card-img-top rounded-0" alt="..."></a>
+                <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
+              <div class="card-body pt-3 p-4">
+                <h6 class="fw-semibold fs-4">Easy</h6>
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- <h6 class="fw-semibold fs-4 mb-0">$50 <span class="ms-2 fw-normal text-muted fs-3"><del>$65</del></span></h6> -->
+                  <ul class="list-unstyled d-flex align-items-center mb-0">
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="card overflow-hidden rounded-2">
+              <div class="position-relative">
+                <a href="javascript:void(0)"><img src="{% static 'images/c2.jpg' %}" class="card-img-top rounded-0" alt="..." style="height: 180px;"></a>
+                <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
+              <div class="card-body pt-3 p-4">
+                <h6 class="fw-semibold fs-4">Versatile</h6>
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- <h6 class="fw-semibold fs-4 mb-0">$650 <span class="ms-2 fw-normal text-muted fs-3"><del>$900</del></span></h6> -->
+                  <ul class="list-unstyled d-flex align-items-center mb-0">
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="card overflow-hidden rounded-2">
+              <div class="position-relative">
+                <a href="javascript:void(0)"><img src="{% static 'images/c3.jpg' %}" class="card-img-top rounded-0" alt="..." style="height: 180px;"></a>
+                <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
+              <div class="card-body pt-3 p-4">
+                <h6 class="fw-semibold fs-4">Dynamic</h6>
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- <h6 class="fw-semibold fs-4 mb-0">$150 <span class="ms-2 fw-normal text-muted fs-3"><del>$200</del></span></h6> -->
+                  <ul class="list-unstyled d-flex align-items-center mb-0">
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="card overflow-hidden rounded-2">
+              <div class="position-relative">
+                <a href="javascript:void(0)"><img src="{% static 'images/c4.jpg' %}" class="card-img-top rounded-0" alt="..."></a>
+                <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-basket fs-4"></i></a>                      </div>
+              <div class="card-body pt-3 p-4">
+                <h6 class="fw-semibold fs-4">Productive</h6>
+                <div class="d-flex align-items-center justify-content-between">
+                  <!-- <h6 class="fw-semibold fs-4 mb-0">$285 <span class="ms-2 fw-normal text-muted fs-3"><del>$345</del></span></h6> -->
+                  <ul class="list-unstyled d-flex align-items-center mb-0">
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="me-1" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                    <li><a class="" href="javascript:void(0)"><i class="ti ti-star text-warning"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </div>
-  </div><br><br>
-  <center>
-    <div id="chartContainer" style="height: 300px; width: 80%;"></div>
-</center>
-  <div class="container" id="cont1">
+  </div>
+ <div class="container" id="cont1">
     <center>
     <h4>Plans</h4>
   </center>
   <div class="row mt-5" id="archiveDiv"  >
     <div id="archiveBox" class="col d-flex justify-content-center" >
-        <i id="archiveIcon" class="fa-solid fa-box-archive fa-fade fa-xl" style="color: orangered;"></i>
+        <i id="archiveIcon" class="fa fa-solid fa-box-archive fa-fade fa-xl" style="color: orangered;"></i>
     </div>
     </div>
     
@@ -585,29 +739,12 @@ body{
  
 
         </script>
-<script type="text/javascript">
-
-    window.onload = function () {
-        var chart = new CanvasJS.Chart("chartContainer", {
-            title:{
-                text: "Sales Chart"              
-            },
-            data: [              
-            {
-                // Change type to "doughnut", "line", "splineArea", etc.
-                type: "column",
-                dataPoints: [
-                    { label: "Pen",  y: 10  },
-                    { label: "Pencil", y: 15  },
-                    { label: "Box", y: 25  },
-                    { label: "Notebook",  y: 30  },
-                    { label: "Bag",  y: 28  }
-                ]
-            }
-            ]
-        });
-        chart.render();
-    }
-    </script>
+<script src="{% static 'jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'sidebarmenu.jsjs' %}"></script>
+<script src="{% static 'app.min.js' %}"></script>
+<script src="{% static 'apexcharts.min.js' %}"></script>
+<script src="{% static 'simplebar.js' %}"></script>
+<script src="{% static 'dashboard.js' %}"></script>
 </body>
 </html>
